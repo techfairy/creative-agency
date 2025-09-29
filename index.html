@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Agency</title>
+  <!--main css-->
+  <link href="src/output.css" rel="stylesheet" />
+  <!--main script-->
+  <script defer src="src/js/script.js"></script>
+  <!--remix icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+  <!--swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.2/swiper-bundle.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@12.0.2/swiper-bundle.min.js"></script>
+  <!--scroll reveal-->
+  <script defer rel="src/js/scrollreveal.min/js"></script>
+</head>
+<body class="bg-page">
+  <!--site wrapper-->
+  <div class="w-full mx-auto">
+    <!--Headeer-->
+    <header id="siteHeader" class="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <div class="container flex items-center justify-between py-3">
+      <!-- Логотип слева -->
+      <a href="/" aria-label="Go to homepage" class="flex items-center">
+        <img src="/assets/Logo.svg" alt="Company logo" class="h-10 w-auto" />
+      </a>
+
+      <!-- Навигация по центру (только desktop) -->
+      <nav id="mainNavigation" aria-label="Main navigation" class="hidden md:flex flex-1 justify-center">
+        <ul class="menu flex gap-10">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Правая зона -->
+      <div class="flex items-center gap-4">
+        <!-- Кнопка справа (desktop) -->
+        <a href="#" class="btn-primary hidden md:block">Contact us</a>
+
+        <!-- Бургер (mobile + tablet) -->
+        <button id="nav__trigger"
+                class="md:hidden flex items-center justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent"
+                aria-label="Toggle main menu"
+                aria-controls="mobileMenu"
+                aria-expanded="false">
+          <i class="ri-menu-3-line text-3xl menu-burger__icon" aria-hidden="true"></i>
+          <i class="ri-close-line text-3xl hidden menu-burger__icon" aria-hidden="true"></i>
+        </button>
+      </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" aria-hidden="true"
+        class="fixed z-[60] top-0 left-0 h-full w-[80%] bg-page-dark transform -translate-x-full transition-transform duration-300 xl:hidden flex flex-col p-6">
+      <nav class="flex flex-col gap-6 text-lg" aria-label="Mobile navigation">
+        <a href="#">Home</a>
+        <a href="#">Works</a>
+        <a href="#">About</a>
+        <a href="#" class="btn-primary">Contact us</a>
+      </nav>
+
+      <div class="mt-auto flex gap-4" aria-label="Social media links">
+        <a href="#" class="social" aria-label="Facebook">f</a>
+        <a href="#" class="social" aria-label="Instagram">ig</a>
+        <a href="#" class="social" aria-label="LinkedIn">in</a>
+        <a href="#" class="social" aria-label="Twitter">tw</a>
+      </div>
+    </div>
+
+    <!--Hero section-->
+
+    <section class="overflow-visible">
+    <div class="container grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-12 items-center">
+      
+      <!-- Left part -->
+      <div class="order-2 md:order-1 text-left space-y-6">
+        <h1>
+          Make your business <span class="text-accent">more powerful</span> with us
+        </h1>
+        <p class="max-w-lg text-lg">
+          We provide various services to make your business grow and get bigger.
+          Your satisfaction is our first priority.
+        </p>
+        <a href="#services"
+          class="inline-block btn-primary px-8 py-4 mt-4">
+          Get Started →
+        </a>
+      </div>
+
+      <!-- Right part -->
+      <div class="order-1 md:order-2 relative flex justify-center xl:justify-end">
+
+        <!-- Image -->
+        <div class="relative z-10">
+          <img src="/assets/main-image.png"
+              alt="Smiling business woman with laptop"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Line -->
+  <div class="absolute inset-x-0 bottom-0 translate-y-1/2 pointer-events-none z-0">
+    <svg class="w-full h-auto" aria-hidden="true" width="1440" height="1021" viewBox="0 0 1440 1021" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.1" d="M1710.11 104.383C1702.45 113.637 1594.03 -26.1252 1422.69 15.8542C1251.35 57.8334 1309.66 156.89 1204.27 211.42C1098.88 265.95 1014.94 185.332 919.219 235.307C823.496 285.282 801.072 409.715 706.217 449.45C611.362 489.185 549.811 387.951 446.696 442.547C343.581 497.143 390.732 572.965 266.383 635.329C142.035 697.694 70.3884 612.853 -48.9576 701.069C-168.304 789.285 -160.331 1020.36 -160.331 1020.36" stroke="#4C40F7" stroke-width="15" />
+</svg>
+  </div>
+  </section>
+
+<!-- Services Section -->
+<section class="text-center">
+  <div class="container w-full">
+    <!-- Section heading -->
+    <h2 class="section-heading--yellow">Our Services</h2>
+    <h3 class="section-heading--white">
+      The various services we provide to make your business more powerful</h3>
+
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-content">
+          <img src="/assets/ideate.svg" class="card-icon" alt="Light bulb symbol for creative ideas" />
+          <h4>Ideate</h4>
+          <p class="text-secondary/80">We help you develop creative ideas so that your business can grow more rapidly</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-content">
+          <img src="/assets/design.svg" alt="Design tools symbol" />
+          <h4>Design</h4>
+          <p class="text-secondary/80">We provide services with the best designs than our designer team for your business</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-content">
+          <img src="/assets/webdev.svg" alt="Browser window icon for web development" />
+          <h4>Web development</h4>
+          <p class="text-secondary/80">We help develop company websites to be more professional and attractive</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-content">
+          <img src="/assets/appdev.svg" alt="Smartphone icon for app development" />
+          <h4>App Development</h4>
+          <p class="text-secondary/80">We help develop company mobile apps to be more professional and attractive</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-content">
+          <img src="/assets/businessgrowth.svg" alt="Arrow graph symbol for business growth" />
+          <h4>Business Growth</h4>
+          <p class="text-secondary/80">We also provide services by providing input for your business growth</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="card-content">
+          <img src="/assets/digitalmarketing.svg" alt="Megaphone symbol for digital marketing" />
+          <h4>Digital Marketing</h4>
+          <p class="text-secondary/80">We also help you market your products through an online marketplace</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistics Section-->
+<section class="bg-page-dark">
+  <div class="container grid grid-cols-1 xl:grid-cols-2 gap-20 items-center">
+    
+    <!-- Left: Statistics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+      <!-- Card 1 -->
+      <div class="stat-card">
+        <h3 class="text-accent stat-card-number">70K+</h3>
+        <p class="stat-card-text">We have more than customers</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="stat-card">
+        <h3 class="stat-card-number text-orange-500">100+</h3>
+        <p class="stat-card-text">Projects we have completed</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="stat-card">
+        <h3 class="stat-card-number text-red-500">10M+</h3>
+        <p class="stat-card-text">People who are helped because of our hard work</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="stat-card">
+        <h3 class="stat-card-number text-green-500">200+</h3>
+        <p class="stat-card-text">Support from world-renowned companies</p>
+      </div>
+    </div>
+
+    <!-- Right: Text content -->
+    <div>
+      <h2>
+        Customer satisfaction is our first priority
+      </h2>
+      <p class="text-secondary/80 mb-6">
+        We serve many customers, ranging from small businesses, medium entrepreneurs, 
+        to world-renowned companies. Their satisfaction is our pleasure. 
+        We strive to provide the best service by:
+      </p>
+      <ul class="space-y-3">
+        <li class="list-items">
+          <i class="ri-checkbox-circle-fill list-items-icon"></i>
+          Provide idea support from our creative team
+        </li>
+        <li class="list-items">
+          <i class="ri-checkbox-circle-fill list-items-icon"></i>
+          Provide attractive and professional design services
+        </li>
+        <li class="list-items">
+          <i class="ri-checkbox-circle-fill list-items-icon"></i>
+          Support for service 24 hours a week
+        </li>
+        <li class="list-items">
+          <i class="ri-checkbox-circle-fill list-items-icon"></i>
+          Helping our customers to grow their business
+        </li>
+        <li class="list-items">
+          <i class="ri-checkbox-circle-fill list-items-icon"></i>
+          Provide support to market products through online marketplace
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Logos -->
+<section class="text-center">
+  <!-- Section headings -->
+  <h2 class="section-heading--yellow">Some of Our Great Customers</h2>
+  <h3 class="section-heading--white">Some of the companies we have worked with</h3>
+
+  <!-- Logos Swiper -->
+  <div class="mt-20">
+    <!-- верхняя лента -->
+    <div class="swiper customer-swiper-right">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/assets/amazon-2.svg" class="customer-logo" alt="Amazon"></div>
+        <div class="swiper-slide"><img src="/assets/jeep-7.svg" class="customer-logo" alt="Jeep"></div>
+        <div class="swiper-slide"><img src="/assets/careem.svg" class="customer-logo" alt="Careem"></div>
+        <div class="swiper-slide"><img src="/assets/hubspot.svg" class="customer-logo" alt="HubSpot"></div>
+        <div class="swiper-slide"><img src="/assets/jquery-1.svg" class="customer-logo" alt="jQuery"></div>
+      </div>
+    </div>
+
+    <!-- нижняя лента -->
+    <div class="swiper customer-swiper-left mt-12">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="/assets/canon-logo.svg" class="customer-logo" alt="Canon"></div>
+        <div class="swiper-slide"><img src="/assets/fedex-express-6.svg" class="customer-logo" alt="FedEx"></div>
+        <div class="swiper-slide"><img src="/assets/bitcoin-logo.svg" class="customer-logo" alt="Bitcoin"></div>
+        <div class="swiper-slide"><img src="/assets/pirelli-2.svg" class="customer-logo" alt="Pirelli"></div>
+        <div class="swiper-slide"><img src="/assets/philips.svg" class="customer-logo" alt="Philips"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--FAQ-->
+<section class="pt-0">
+  <h2 class="section-heading--yellow text-center">Frequently Ask Question</h2>
+  <h3 class="section-heading--white text-center">Some of our frequently asked questions</h3>
+
+  <div class="container mt-12 max-w-3xl mx-auto space-y-8">
+    <!-- Item -->
+    <div class="faq-item active rounded-lg overflow-hidden">
+      <button class="faq-question w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-page-dark">
+        <span>What are the services provided to customers?</span>
+        <span class="faq-icon">−</span>
+      </button>
+      <div class="faq-answer px-4 py-3 bg-page block">
+        Hello, we provide various services to help your business grow and develop. We help provide ideas, 
+        create designs, develop websites and mobile applications, provide support for the growth of business 
+        ideas, to help customers market their products online through the marketplace.
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="faq-item border rounded-lg overflow-hidden">
+      <button class="faq-question w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-page-dark">
+        <span>How can I submit a proposal for cooperation?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer px-4 py-3 bg-page hidden">
+        You can submit proposals via our contact form or by email.
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="faq-item border rounded-lg overflow-hidden">
+      <button class="faq-question w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-page-dark">
+        <span>I come from a faraway place, can collaboration be done online?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer px-4 py-3 bg-page hidden">
+        Yes, we collaborate fully online through meeting applications.
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="faq-item border rounded-lg overflow-hidden">
+      <button class="faq-question w-full flex justify-between items-center px-4 py-3 text-left font-semibold bg-page-dark">
+        <span>How do I get the payment complete?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer px-4 py-3 bg-page hidden">
+        Payments are processed securely through our trusted payment gateway.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Reviews-->
+<section class="testimonials-section text-center">
+  <!-- Заголовки -->
+  <h2 class="section-heading--yellow">Testimonials</h2>
+  <h3 class="section-heading--white">Some testimonials from our customers</h3>
+
+  <!-- Сетка отзывов -->
+  <div class="container mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+    
+    <!-- Карточка -->
+    <div class="testimonial-card">
+      <img src="/assets/review1.png" alt="Ronald Richards photo" class="testimonial-avatar">
+      <h4 class="testimonial-name">Ronald Richards</h4>
+      <p class="testimonial-role">Google Inc.</p>
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="/assets/review2.png" alt="Guy Hawkins photo" class="testimonial-avatar">
+      <h4 class="testimonial-name">Guy Hawkins</h4>
+      <p class="testimonial-role">Paypal Inc.</p>
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="/assets/review3.png" alt="Kristin Watson photo" class="testimonial-avatar">
+      <h4 class="testimonial-name">Kristin Watson</h4>
+      <p class="testimonial-role">Microsoft Inc.</p>
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="/assets/review4.png" alt="Robert Fox photo" class="testimonial-avatar">
+      <h4 class="testimonial-name">Robert Fox</h4>
+      <p class="testimonial-role">Facebook Inc.</p>
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="/assets/review5.png" alt="Savannah Nguyen photo" class="testimonial-avatar">
+      <h4 class="testimonial-name">Savannah Nguyen</h4>
+      <p class="testimonial-role">Twitter Inc.</p>
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+    </div>
+
+    <div class="testimonial-card">
+      <img src="/assets/review6.png" alt="Courtney Henry photo" class="testimonial-avatar">
+      <h4 class="testimonial-name">Courtney Henry</h4>
+      <p class="testimonial-role">Apple Inc.</p>
+      <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <div class="testimonial-stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container space-y-16">
+
+    <!-- Subscribe block -->
+    <div class="subscribe-card">
+      <p class="subscribe-eyebrow">Get Notified About Project</p>
+      <h3 class="subscribe-title">Subscribe Now</h3>
+
+      <form class="subscribe-form" action="#" method="post" novalidate>
+        <label for="subscribe-email" class="sr-only">Email</label>
+        <input
+          id="subscribe-email"
+          name="email"
+          type="email"
+          inputmode="email"
+          autocomplete="email"
+          required
+          placeholder="Email"
+          class="subscribe-input"
+        />
+        <button type="submit" class="subscribe-button" aria-label="Subscribe">
+          <i class="ri-arrow-right-s-line text-2xl"></i>
+        </button>
+      </form>
+
+      <p class="subscribe-help">We respect your privacy.</p>
+    </div>
+
+    <!-- Footer grid -->
+    <div class="footer-grid">
+      <!-- About -->
+      <div class="footer-about">
+        <a href="/" aria-label="Go to homepage" class="flex items-center">
+        <img src="/assets/Logo.svg" alt="Company logo" class="h-10 w-auto" />
+      </a>
+        <p class="footer-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <!-- Office -->
+      <div>
+        <h4 class="footer-heading">Our Office</h4>
+        <img src="/assets/footer-map.svg" alt="Map" class="footer-map" />
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-contact">
+          <li>Jl KH Samanhudi Metro Atom Plaza Bl AKS 1/11, DKI Jakarta</li>
+          <li>info@yourdomain.com</li>
+          <li>+62 (0) 000 0000 00</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p>© 2021 Creative Agency</p>
+      <nav class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Works</a>
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</div>
+</body>
+</html>
